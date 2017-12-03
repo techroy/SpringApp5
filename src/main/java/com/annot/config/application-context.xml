@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="b1" class="com.javaconfig.beans.B">
+		<property name="name" value="b1"/>
+	</bean>
+	
+	<bean id="b2" class="com.javaconfig.beans.B">
+		<property name="name" value="b2"/>
+	</bean>
+	
+	
+	<bean id="myengine" class="com.autowired.beans.Engine" >
+		<!-- <qualifier value="myeng"></qualifier> -->
+		<property name="name" value="myengine"/>
+	</bean>
+	
+	<bean id="castrolengine" class="com.autowired.beans.Engine" >
+		<property name="name" value="castrol engine"/>
+	</bean>
+
+	<!-- <bean id="motor" class="com.autowired.beans.Motor" /> -->
+	
+	<context:component-scan base-package="com"/>
+	
+	
+</beans>
+
+
